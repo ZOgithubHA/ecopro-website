@@ -43,6 +43,13 @@ header {
     gap: 20px;
 }
 
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
 .logo {
     font-size: 28px;
     font-weight: bold;
@@ -62,6 +69,39 @@ header {
     align-items: center;
     gap: 20px;
     flex-wrap: wrap;
+}
+
+/* Language Switcher */
+.language-switcher {
+    display: flex;
+    gap: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 5px;
+    border-radius: 25px;
+    backdrop-filter: blur(10px);
+}
+
+.lang-btn {
+    padding: 8px 16px;
+    border: none;
+    background: transparent;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: all 0.3s;
+    letter-spacing: 0.5px;
+}
+
+.lang-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.lang-btn.active {
+    background: white;
+    color: #667eea;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .phone {
@@ -444,6 +484,16 @@ footer {
     .header-content {
         justify-content: center;
         text-align: center;
+    }
+
+    .header-right {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .language-switcher {
+        order: -1;
     }
 
     .services-grid,
